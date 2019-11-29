@@ -3,7 +3,7 @@
 """
 Module docstring: One line description of what your program does.
 """
-__author__ = "troyerjl and geeks for geeks"
+__author__ = "troyerjl and geeks for geeks and also Peter Marsh"
 
 import sys
 
@@ -41,9 +41,10 @@ def helper_funct_logic(string):
 
 def main(args):
     lines = helper_funct_read_file()
-    for line in lines:
-        result = helper_funct_logic(line)
-        print(result)
+    with open("output.txt", "w") as fh:
+        for line in lines:
+            result = helper_funct_logic(line)
+            fh.writelines(result + " \n")
 
 if __name__ == '__main__':
     main(sys.argv)
