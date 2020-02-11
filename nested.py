@@ -36,8 +36,10 @@ def helper_funct_logic(string):
                 return "No " + str(count_token)            
     if len(stack) == 0:
         return "Yes"
-    else: 
-        return "No " + str(count_token + 1)       
+    elif count_token <= 4:
+        return "No " + str(count_token)
+    else:
+        return "No " + str(count_token + 1)             
 
 def main(args):
     lines = helper_funct_read_file()
